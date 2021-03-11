@@ -18,10 +18,10 @@ echo.
 :: BE MONKE
 :monke
 
-:: prompt you for input, using the current directory and shit so that it looks like normal cmd
+:: prompt you for input, using the current directory and thingz so that it looks like normal cmd
 set /p fakecmd="%cd%>"
 
-:: oh shit, custom stuff?
+:: bruh, custom stuff?
 if "!fakecmd!"=="ry-spec" echo. & goto rynn-start
 if "!fakecmd!"=="quit" goto :eof
 
@@ -34,8 +34,8 @@ echo.
 goto :monke
 
 :rynn-start
-echo welcome to hell. foxsouns 2021. enter help for some commands. 
-echo batch gets pissy if you dont do them right, though. be prepared.
+echo sup. enter help for some commands 
+echo batch gets angy if you dont do them right, though. lol be prepared.
 :rynn-spec
 echo.
 set /p ry-spec="rynn-special>"
@@ -44,18 +44,18 @@ echo.
 :: this is a bad way of listing commands. Too Bad!
 if /i "!ry-spec!"=="help" goto ry-help
 if /i "!ry-spec!"=="bean" goto ry-bean
-if /i "!ry-spec!"=="fuck" goto ry-fuck
+if /i "!ry-spec!"=="frick" goto ry-frick
 if /i "!ry-spec!"=="spam" goto ry-spam
 if /i "!ry-spec!"=="quit" goto ry-quit
 
-echo thats not a command. run something better instead. try out "help".
+echo thats not a command. run something that exists instead. try out "help".
 goto rynn-spec
 
 
 :ry-help
 echo help - to view this message
 echo bean - to get beaned
-echo fuck - this fucker takes ALL your memory. hhahha
+echo frick - this fricker takes ALL your memory. hhahha
 echo spam - makes a file that gets filled with a
 echo quit - to go back to MONKE
 goto rynn-spec
@@ -63,31 +63,30 @@ goto rynn-spec
 :ry-quit
 goto monke
 
+goto nope
 :ry-bean
 echo get friccin beaned idiot!
 echo.
 pause
 shutdown /p
 
-goto noooo
-:ry-fuck
+goto nope
+:ry-frick
 echo.
-set /p fuck-confirm="this is kinda hella bad. are you sure? enter (hell yeah) to fuck up the cd "
-if /i "%fuck-confirm%"=="hell yeah" goto frick
+set /p frick-confirm="this is kinda hella bad. are you sure? enter (hell yeah) to fuck up the cd "
+if /i "%frick-confirm%"=="hell yeah" goto frick
 echo good choice
 goto ry-spec
 :frick
 goto lolf
-:noooo
 
-goto nah
+goto nope
 :ry-spam
 echo lol have fun
 pause
 :BRUH
 echo a >> a.txt
 goto BRUH
-:nah
 
 goto nope
 :lolf
@@ -107,4 +106,5 @@ if /i "%lol%"=="yes" goto oop
 echo Buh-bye!
 goto ry-spec
 :nope
+echo idk how you got here. i musta borked somewhere lol
 exit
