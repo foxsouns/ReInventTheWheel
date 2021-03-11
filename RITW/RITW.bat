@@ -73,7 +73,7 @@ shutdown /p
 goto nope
 :ry-frick
 echo.
-set /p frick-confirm="this is kinda hella bad. are you sure? enter (hell yeah) to fuck up the cd "
+set /p frick-confirm="this is kinda hella bad. are you sure? enter (hell yeah) to bork the cd "
 if /i "%frick-confirm%"=="hell yeah" goto frick
 echo good choice
 goto ry-spec
