@@ -2,7 +2,7 @@
 setlocal enabledelayedexpansion
 
 ::intro
-echo A front-end to the Microsoft Command Prompt. [Version 1.1.0]
+echo A front-end to the Microsoft Command Prompt. [Version 0.1.1-alpha]
 :: it's a 1.x.x update because it does what i want it to do. but its not finished: i want to put more dumb utils and stuff in.
 echo made by foxsouns using her time writing this instead of doing her schoolwork in march 2021
 echo cool new commands: ry-spec, quit
