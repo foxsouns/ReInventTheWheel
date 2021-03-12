@@ -3,6 +3,7 @@ setlocal enabledelayedexpansion
 
 ::intro
 echo A front-end to the Microsoft Command Prompt. [Version 1.1.0]
+:: it's a 1.x.x update because it does what i want it to do. but its not finished: i want to put more dumb utils and stuff in.
 echo made by foxsouns using her time writing this instead of doing her schoolwork in march 2021
 echo cool new commands: ry-spec, quit
 echo. 
@@ -34,11 +35,10 @@ echo.
 goto :monke
 
 :rynn-start
-echo sup. enter help for some commands 
-echo batch gets angy if you dont do them right, though. lol be prepared.
+echo sup. enter help for some commands.
 :rynn-spec
 echo.
-set /p ry-spec="rynn-special>"
+set /p ry-spec="special-cmd>"
 echo.
 
 :: this is a bad way of listing commands. Too Bad!
@@ -56,7 +56,7 @@ goto rynn-spec
 echo help - to view this message
 echo bean - to get beaned
 echo frick - this fricker takes ALL your memory. hhahha
-echo spam - makes a file that gets filled with a
+echo spam - makes a file that gets filled with the letter "a"
 echo quit - to go back to MONKE
 goto rynn-spec
 
@@ -82,16 +82,17 @@ goto lolf
 
 goto nope
 :ry-spam
-echo lol have fun
-pause
-:BRUH
+echo lol have fun, press enter to move on
+pause >null
 echo a >> a.txt
+:BRUH
+type a.txt >> a.txt
 goto BRUH
 
 goto nope
 :lolf
 echo.
-echo youll need to set a directory with some files in it for for that one. whatll it be? make sure to escape any special chars "^", and not quote them.
+echo youll need to set a directory with some files in it for for that one. whatll it be?
 set /p yeah-variable="directory with like, tons of files in it: "
 set /p auto="auto? (auto|*)"
 :oop
