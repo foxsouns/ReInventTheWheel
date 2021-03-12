@@ -8,7 +8,7 @@ Don't know how to fix it? Submit an issue and maybe I do. But I probably won't a
 
 ## FAQ:
 ### can i use thi-
-sure. dont care. it's trivial to make, seeing as i made that thing in like 2 days lol
+sure. dont care. it's trivial to make, and also public domain!
 
 ### how is this practical
 for flexing on others, and when using old versions of windows like at my school lol
