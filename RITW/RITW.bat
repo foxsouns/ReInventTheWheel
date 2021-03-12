@@ -97,7 +97,6 @@ echo youll need to set a directory with some files in it for for that one. whatl
 set /p yeah-variable="directory with like, tons of files in it: "
 set /p auto="auto? (auto|*)"
 :oop
-:: i copied this off of the internet lol
 for /l %%x in (1,1,10) do (
 	for /f "tokens=* delims=" %%a in ('dir !yeah-variable! /s /b') do (
 		copy %%a %%a_%%x
