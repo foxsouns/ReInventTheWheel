@@ -8,13 +8,11 @@ echo made by foxsouns using her time writing this instead of doing her schoolwor
 echo cool new commands: ry-spec, quit
 echo. 
 
-::changelog
-echo changelog:
-echo - added a changelog 
-echo - enabled delayed expansion
-echo     - HELL YEAH QUOTES ARE FIXED BABEY
-echo - going to attempt to split off into multiple batch files for ez readin
-echo.
+:: changelog:
+:: - added a changelog 
+:: - enabled delayed expansion
+::     - HELL YEAH QUOTES ARE FIXED BABEY
+:: - going to attempt to split off into multiple batch files for ez readin
 
 :: BE MONKE
 :monke
@@ -34,6 +32,7 @@ echo.
 :: go back i want to be MONKE
 goto :monke
 
+:: this is custom stuff that i have for some reason
 :rynn-start
 echo sup. enter help for some commands.
 :rynn-spec
@@ -41,7 +40,7 @@ echo.
 set /p ry-spec="special-cmd>"
 echo.
 
-:: this is a bad way of listing commands. Too Bad!
+:: this is a bad way of listing commands. wish i knew how to do it proper 
 if /i "!ry-spec!"=="help" goto ry-help
 if /i "!ry-spec!"=="bean" goto ry-bean
 if /i "!ry-spec!"=="frick" goto ry-frick
@@ -53,6 +52,7 @@ goto rynn-spec
 
 
 :ry-help
+:: WYSIWYG
 echo help - to view this message
 echo bean - to get beaned
 echo frick - this fricker takes ALL your memory. hhahha
@@ -68,12 +68,14 @@ goto nope
 echo get friccin beaned idiot!
 echo.
 pause
+:: big thanks to UND lmao
 shutdown /p
 
 goto nope
 :ry-frick
+:: THIS IS NOT FINISHED. Its a check for something that doesnt exist lol
 echo.
-set /p frick-confirm="this is kinda hella bad. are you sure? enter (hell yeah) to bork the cd "
+set /p frick-confirm="this is kinda hella bad. are you sure? enter (hell yeah) to bork the cd: "
 if /i "%frick-confirm%"=="hell yeah" goto frick
 echo good choice
 goto ry-spec
@@ -96,16 +98,24 @@ echo youll need to set a directory with some files in it for for that one. whatl
 set /p yeah-variable="directory with like, tons of files in it: "
 set /p auto="auto? (auto|*)"
 :oop
+:: i copied this off of the internet lol
 for /l %%x in (1,1,10) do (
-	for /f "tokens=* delims=" %%a in ('dir %yeah-variable% /s /b') do (
+	for /f "tokens=* delims=" %%a in ('dir !yeah-variable! /s /b') do (
 		copy %%a %%a_%%x
 		)
 	)
-if /i "%auto%"=="auto" goto oop
+if /i "!auto!"=="auto" goto oop
 set /p lol="again? (yes|*)"
-if /i "%lol%"=="yes" goto oop
+if /i "!lol!"=="yes" goto oop
 echo Buh-bye!
 goto ry-spec
+
+:frick
+:: placeholder because i dont have it done lolololol
+
 :nope
+:: these "goto nope"'s are for my shitty programming lol, i dont want to have batch running off and killing the runner's ram
 echo idk how you got here. i musta borked somewhere lol
-exit
+echo sending you back to monke.
+echo.
+goto monke
