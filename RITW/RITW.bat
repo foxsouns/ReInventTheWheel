@@ -83,7 +83,7 @@ goto lolf
 
 goto nope
 :ry-spam
-echo lol have fun, press enter to move on
+echo lol have fun, press a key to move on
 pause >null
 echo a >> a.txt
 :BRUH
