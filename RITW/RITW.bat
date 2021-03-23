@@ -46,6 +46,7 @@ if /i "!ry-spec!"=="frick" goto ry-frick
 if /i "!ry-spec!"=="spam" goto ry-spam
 if /i "!ry-spec!"=="quit" goto ry-quit
 set /p askey="thats not a command. help is the list. enter y to run it as a normal thing: "
+echo.
 if /i "!askey!"=="y" !ry-spec!
 goto rynn-spec
 
