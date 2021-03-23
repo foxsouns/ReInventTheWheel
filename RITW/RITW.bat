@@ -45,7 +45,6 @@ if /i "!ry-spec!"=="bean" goto ry-bean
 if /i "!ry-spec!"=="frick" goto ry-frick
 if /i "!ry-spec!"=="spam" goto ry-spam
 if /i "!ry-spec!"=="quit" goto ry-quit
-
 echo thats not a command. run something that exists instead. try out "help".
 goto rynn-spec
 
@@ -72,7 +71,7 @@ shutdown /p
 
 goto nope
 :ry-frick
-:: THIS IS NOT FINISHED. Its a check for something that doesnt exist lol
+:: modern problems hell yeah im fuckin BLIND
 echo.
 set /p frick-confirm="this is kinda hella bad. are you sure? enter (hell yeah) to bork the cd: "
 if /i "%frick-confirm%"=="hell yeah" goto frick
@@ -107,9 +106,6 @@ set /p lol="again? (yes|*)"
 if /i "!lol!"=="yes" goto oop
 echo Buh-bye!
 goto ry-spec
-
-:frick
-:: placeholder because i dont have it done lolololol
 
 :nope
 :: these "goto nope"'s are for my shitty programming lol, i dont want to have batch running off and killing the runner's ram
