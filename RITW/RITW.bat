@@ -45,7 +45,8 @@ if /i "!ry-spec!"=="bean" goto ry-bean
 if /i "!ry-spec!"=="frick" goto ry-frick
 if /i "!ry-spec!"=="spam" goto ry-spam
 if /i "!ry-spec!"=="quit" goto ry-quit
-echo thats not a command. run something that exists instead. try out "help".
+set /p askey="thats not a command. help is the list. enter y to run it as a normal thing: "
+if /i "!askey!"=="y" !ry-spec!
 goto rynn-spec
 
 
@@ -81,15 +82,6 @@ goto ry-spec
 goto lolf
 
 goto nope
-:ry-spam
-echo lol have fun, press a key to move on
-pause >null
-echo a >> a.txt
-:BRUH
-type a.txt >> a.txt
-goto BRUH
-
-goto nope
 :lolf
 echo.
 echo youll need to set a directory with some files in it for for that one. whatll it be?
@@ -107,8 +99,19 @@ if /i "!lol!"=="yes" goto oop
 echo Buh-bye!
 goto ry-spec
 
+goto nope
+:ry-spam
+echo lol have fun, press a key to move on
+pause >null
+echo a >> a.txt
+:BRUH
+type a.txt >> a.txt
+goto BRUH
+
 :nope
-:: these "goto nope"'s are for my shitty programming lol, i dont want to have batch running off and killing the runner's ram
+:: these "goto nope"'s are for my shitty programming lol, 
+:: i dont want to have batch running off and killing the runner's ram
+echo.
 echo idk how you got here. i musta borked somewhere lol
 echo sending you back to monke.
 echo.
