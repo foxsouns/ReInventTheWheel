@@ -1,20 +1,16 @@
 @echo off
 setlocal enabledelayedexpansion
+setlocal enableextensions
 
+::bypass intro if called from addons
 if "!ckrun!"=="1" goto monke
+
 ::intro
-echo A front-end to the Microsoft Command Prompt. [Version 0.1.1-alpha]
-echo made by foxsouns using her time writing this instead of doing her schoolwork in march 2021
+echo A front-end to the Microsoft Command Prompt. [Version 0.1.3-alpha]
+echo made by foxsouns using her time writing this instead of doing her schoolwork in march-april 2021
 echo. 
 
-:: changelog:
-:: - added a changelog 
-:: - enabled delayed expansion
-::     - HELL YEAH QUOTES ARE FIXED BABEY
-:: - going to attempt to split off into multiple batch files for ez readin
-
-
-:: sorry! gonna need this lol
+:: sorry! gonna need this later lol
 set initcd=!cd!
 
 :: BE MONKE
@@ -45,5 +41,3 @@ echo You don't have RITW-addons.bat
 echo.
 goto monke
 )
-
-
