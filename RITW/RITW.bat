@@ -40,7 +40,7 @@ echo.
 call "!initcd!\RITW-addons.bat"
 ) else (
 echo.
-echo You don't have RITW-addons.bat
+echo You don't have RITW-addons.bat.
 echo.
 goto monke
 )
