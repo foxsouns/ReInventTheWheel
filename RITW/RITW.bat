@@ -8,8 +8,11 @@ if "!ckrun!"=="1" goto monke
 ::intro
 echo A front-end to the Microsoft Command Prompt. [Version 0.1.3-alpha]
 echo made by foxsouns using her time writing this instead of doing her schoolwork in march-april 2021
+echo.
+echo WARNIN': this thingy depends on the names being the right thing, 
+echo and that theyre being ran in the same folder. else: addons wont work.
 echo. 
-
+echo. youve got "quit", and if its workin, you have access to ry-spec. have fun!
 :: sorry! gonna need this later lol
 set initcd=!cd!
 
