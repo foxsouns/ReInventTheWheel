@@ -2,8 +2,9 @@
 setlocal enabledelayedexpansion
 setlocal enableextensions
 
+title ReInventTheWheel
+
 :: this is custom stuff that i have for some reason
-set ckrun=1
 echo sup. enter help for some commands.
 :ry-spec
 echo.
@@ -15,11 +16,19 @@ if /i "!ry-query!"=="help" goto ry-help
 if /i "!ry-query!"=="bean" goto ry-bean
 if /i "!ry-query!"=="frick" goto ry-frick
 if /i "!ry-query!"=="spam" goto ry-spam
-if /i "!ry-query!"=="quit" call "!initcd!\RITW.bat"
+if /i "!ry-query!"=="quit" goto ry-quit
 set /p askey="thats not a command. help is the list. enter y to run it as a normal thing: "
 echo.
 if /i "!askey!"=="y" !ry-query!
 goto ry-spec
+
+:ry-quit
+if exist "!initcd!\RITW.bat" (
+echo.
+call "!initcd!\RITW.bat"
+) else (
+goto eof
+)
 
 :ry-help
 :: WYSIWYG
