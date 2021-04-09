@@ -17,18 +17,21 @@ if /i "!ry-query!"=="bean" goto ry-bean
 if /i "!ry-query!"=="frick" goto ry-frick
 if /i "!ry-query!"=="spam" goto ry-spam
 if /i "!ry-query!"=="quit" goto ry-quit
-set /p askey="thats not a command. help is the list. enter y to run it as a normal thing: "
+echo thats not a command. (help lists them all.) runnnin it as a normal thing
 echo.
-if /i "!askey!"=="y" !ry-query!
+!ry-query!
 goto ry-spec
 
 :ry-quit
-if exist "!initcd!\RITW.bat" (
+if exist "!initcd!\RITW-main.bat" (
 echo.
-call "!initcd!\RITW.bat"
+call "!initcd!\RITW-main.bat"
 ) else (
-goto eof
+echo.
+echo bup
+goto ry-spec
 )
+goto nope
 
 :ry-help
 :: WYSIWYG
@@ -91,4 +94,10 @@ goto BRUH
 echo.
 echo idk how you got here. i musta borked somewhere lol
 echo sendin ya to monke
-call "!initcd!\RITW.bat"
+echo.
+if exist "!initcd!\RITW-main.bat" (
+	call "!initcd!\RITW-main.bat"
+) else (
+echo are you KIDDING ME
+goto ry-spec
+)
