@@ -5,6 +5,16 @@ setlocal enableextensions
 title ReInventTheWheel
 
 :: this is custom stuff that i have for some reason
+if not "!ckrun!"=="1" (
+goto hey
+) else (
+goto sup
+)
+:hey
+echo hey! please launch me from ritw-main. imma dumb batch file and some stuff breaks without main,,,
+pause
+goto eof
+:sup
 echo sup. enter help for some commands.
 :ry-spec
 echo.
@@ -16,6 +26,7 @@ if /i "!ry-query!"=="help" goto ry-help
 if /i "!ry-query!"=="bean" goto ry-bean
 if /i "!ry-query!"=="frick" goto ry-frick
 if /i "!ry-query!"=="spam" goto ry-spam
+if /i "!ry-query!"=="baby" goto ry-baby
 if /i "!ry-query!"=="quit" goto ry-quit
 echo thats not a command. (help lists them all.) runnnin it as a normal thing
 echo.
@@ -39,6 +50,7 @@ echo help - to view this message
 echo bean - to get beaned
 echo frick - this fricker takes ALL your memory. hhahha
 echo spam - makes a file that gets filled with the letter "a"
+echo baby - starts a new term with RITW-minimal.bat from
 echo quit - to go back to MONKE
 goto ry-spec
 
@@ -87,6 +99,14 @@ echo a >> a.txt
 :BRUH
 type a.txt >> a.txt
 goto BRUH
+
+:ry-baby
+if exist "!initcd!\RITW-minimal.bat" (
+	start "!initcd!\RITW-minimal.bat"
+) else (
+echo lol you dont have minimal
+goto ry-spec
+)
 
 :nope
 :: these "goto nope"'s are for my shitty programming lol, 
