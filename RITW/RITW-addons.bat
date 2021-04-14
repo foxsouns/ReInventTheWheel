@@ -12,8 +12,9 @@ goto sup
 )
 :hey
 echo hey! please launch me from ritw-main. imma dumb batch file and some stuff breaks without main,,,
-pause
-goto eof
+echo this batch file is sad. press any key to advance.
+pause >nul
+echo.
 :sup
 echo sup. enter help for some commands.
 :ry-spec
@@ -103,6 +104,7 @@ goto BRUH
 :ry-baby
 if exist "!initcd!\RITW-minimal.bat" (
 	start "!initcd!\RITW-minimal.bat"
+	goto ry-spec
 ) else (
 echo lol you dont have minimal
 goto ry-spec
