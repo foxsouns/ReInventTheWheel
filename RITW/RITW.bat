@@ -105,9 +105,9 @@ goto nope
 :ry-spam
 echo lol have fun, press a key
 pause >nul
-echo a >> a.txt
+echo a >> a
 :BRUH
-type a.txt >> a.txt
+type a >> a
 goto BRUH
 
 :nope
