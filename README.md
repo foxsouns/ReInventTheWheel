@@ -2,9 +2,9 @@
 A front-end for Windows CMD, using a batch file.
 
 
-If you want some of your batch shit in it, just submit a PR. 
+If you want some of your batch stuff in it, just submit a PR. 
 
-Don't know how to impliment it? Submit an issue. Maybe I can do it *for* you.
+Don't know how to impliment it? Submit an issue. Maybe I can do it for ya.
 
 ## FAQ:
 ### can i use thi-
