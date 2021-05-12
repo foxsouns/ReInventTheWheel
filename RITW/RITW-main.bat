@@ -3,15 +3,12 @@ setlocal enabledelayedexpansion enableextensions
 
 title ReInventTheWheel
 
-:: sorry! gonna need this later lol
-set initcd=!cd!
-
 ::bypass intro if already called
 if "!ckrun!"=="1" (
-goto monke
+    goto monke
 ) else (
-set ckrun=1
-goto intro
+    set ckrun=1
+    goto intro
 )
 
 :intro
@@ -56,15 +53,7 @@ echo.
 goto ry-spec
 
 :ry-quit
-if exist "!initcd!\RITW-main.bat" (
-echo.
-call "!initcd!\RITW-main.bat"
-) else (
-echo.
-echo bup
-goto ry-spec
-)
-goto nope
+goto monke
 
 :ry-help
 :: WYSIWYG
@@ -72,7 +61,6 @@ echo help - to view this message
 echo bean - to get beaned
 echo frick - this fricker takes ALL your memory. hhahha
 echo spam - makes a file that gets filled with the letter "a"
-echo baby - starts a new term with RITW-minimal.bat from
 echo quit - to go back to MONKE
 goto ry-spec
 
@@ -81,8 +69,7 @@ goto nope
 echo get friccin beaned idiot!
 echo.
 pause
-:: big thanks to UND lmao
-shutdown /p
+exit
 
 goto nope
 :ry-frick
@@ -93,19 +80,15 @@ if /i "%frick-confirm%"=="hell yeah" goto frick
 echo good choice
 goto ry-spec
 :frick
-goto lolf
-
-goto nope
-:lolf
 echo.
 echo youll need to set a directory with some files in it for for that one. whatll it be?
 set /p yeah-variable="directory with like, tons of files in it: "
 set /p auto="auto? (auto|*)"
 :oop
 for /l %%x in (1,1,10) do (
-for /f "tokens=* delims=" %%a in ('dir !yeah-variable! /s /b') do (
-copy %%a %%a_%%x
-)
+    for /f "tokens=* delims=" %%a in ('dir !yeah-variable! /s /b') do (
+        copy %%a %%a_%%x
+    )
 )
 if /i "!auto!"=="auto" goto oop
 set /p lol="again? (yes|*)"
