@@ -43,6 +43,7 @@ echo.
 
 :: this is a bad way of listing commands. wish i knew how to do it proper 
 if /i "!ry-query!"=="help" goto ry-help
+if /i "!ry-query!"=="su" goto ry-su
 if /i "!ry-query!"=="bean" goto ry-bean
 if /i "!ry-query!"=="frick" goto ry-frick
 if /i "!ry-query!"=="spam" goto ry-spam
@@ -58,13 +59,17 @@ goto monke
 :ry-help
 :: WYSIWYG
 echo help - to view this message
+echo sudo - run that command in an admin window
 echo bean - to get beaned
 echo frick - this fricker takes ALL your memory. hhahha
 echo spam - makes a file that gets filled with the letter "a"
 echo quit - to go back to MONKE
 goto ry-spec
 
-goto nope
+:ry-su
+runas /user:!computername!/administrator cmd
+goto ry-spec
+
 :ry-bean
 echo get friccin beaned idiot!
 echo.
